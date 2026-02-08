@@ -15,5 +15,7 @@ __pycache__/
 
 # 忽略运行结果文件夹（根据你截图中的路径）
 NestFuse/fusion_result/
+NestFuse/fusion_test_data/
 NestFuse/runs/
 test_results*/
+train/

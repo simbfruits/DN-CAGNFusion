@@ -7,8 +7,8 @@ from PIL import Image
 import torch
 from torchvision import transforms
 
-from GLPN_model import Global_Luminance_Perception
-from SARN_model import Spatial_Aware_Refinement
+from model_GLPN import Global_Luminance_Perception
+from model_SARN import Spatial_Aware_Refinement
 from NestFuse.models import fuse_model, fusion_layer
 
 # 添加 NestFuse 路径并导入

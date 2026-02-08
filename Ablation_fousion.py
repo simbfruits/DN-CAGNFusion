@@ -11,8 +11,8 @@ from torchvision import transforms
 from tqdm import tqdm
 
 # 导入模型
-from GLPN_model import Global_Luminance_Perception
-from SARN_model import Spatial_Aware_Refinement
+from model_GLPN import Global_Luminance_Perception
+from model_SARN import Spatial_Aware_Refinement
 from NestFuse.models.NestFuse import NestFuse_eval as DNFN_Model
 from FUSION import rgb_to_ycbcr, ycbcr2rgb
 from NestFuse.models import fusion_layer

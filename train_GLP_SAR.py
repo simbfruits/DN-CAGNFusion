@@ -12,8 +12,8 @@ from tqdm import tqdm
 from math import exp
 import torchvision.models as models
 
-from GLPN_model import Global_Luminance_Perception
-from SARN_model import Spatial_Aware_Refinement
+from model_GLPN import Global_Luminance_Perception
+from model_SARN import Spatial_Aware_Refinement
 
 
 # =====================================================

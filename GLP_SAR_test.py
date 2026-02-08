@@ -6,8 +6,8 @@ from torchvision import transforms
 
 
 # 导入你的模型类 (请确保文件名匹配)
-from GLPN_model import Global_Luminance_Perception
-from SARN_model import Spatial_Aware_Refinement
+from model_GLPN import Global_Luminance_Perception
+from model_SARN import Spatial_Aware_Refinement
 
 def test_inference(input_dir, save_dir, lfn_weights, lan_weights):
     # 1. 环境准备
