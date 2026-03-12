@@ -30,6 +30,7 @@ test_results/
 test_results1562/
 runs/
 checkpoint/
+DNFN/README.md
 # 修改这里：不要直接忽略整个文件夹，而是忽略文件夹下的所有内容
 runs/**/*
 checkpoint/**/*
