@@ -23,7 +23,7 @@ Usage Guide
 1. Project Structure
 Ensure your root directory includes the necessary pre-trained weight files:
 DN-CAGNFusion/
-├── checkpoint/enhanced_train/   # Contains LFN and LAN weights
+├── checkpoint/enhanced_train/   # Contains GLPN and SARN weights
 ├── DNFN/runs/                   # Contains DNFN weights
 └── DNFN/fusion_test_data/       # Test data directory
 2. Running the Fusion
