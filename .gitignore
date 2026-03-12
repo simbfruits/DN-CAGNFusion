@@ -1,25 +1,47 @@
-# 忽略所有图片
+# --- 忽略 Python 与系统临时文件 ---
+__pycache__/
+*.py[cod]
+*$py.class
+.DS_Store
+Thumbs.db
+
+# --- 忽略 IDE 配置文件 ---
+.idea/
+.vscode/
+*.iml
+.cursor/
+
+# --- 忽略图片文件 ---
 *.jpg
 *.png
 *.jpeg
 *.gif
 
-# 忽略 Python 缓存
-__pycache__/
-*.pyc
+# --- 忽略特定的测试/实验脚本 (Python文件) ---
+GLP_SAR_test.py
+Ablation_fousion.py
+Ablation_experiment.py
+train_GLP_SAR.py
 
-# 忽略 IDE 配置文件
-.idea/
-.vscode/
-*.iml
+# --- 忽略运行结果与数据集 ---
+DNFN/fusion_result/
+DNFN/fusion_test_data/
+test_results/
+test_results1562/
+runs/
+checkpoint/
+# 修改这里：不要直接忽略整个文件夹，而是忽略文件夹下的所有内容
+runs/**/*
+checkpoint/**/*
+# --- 重点：权重文件处理逻辑 ---
+# 1. 全局忽略所有权重文件
+*.pth
 
-# 忽略运行结果文件夹（根据你截图中的路径）
-NestFuse/fusion_result/
-NestFuse/fusion_test_data/
-test_results*/
-train/
-# 忽略 runs 文件夹下所有以 train_ 开头的内容
-NestFuse/runs/train_*
+# 2. 局部放行你需要的那三个文件
+# 注意：即使父目录被忽略，显式路径取反通常能生效
+!checkpoint/enhanced_train/LFN_epoch_20.pth
+!checkpoint/enhanced_train/LAN_epoch_20.pth
+!DNFN/runs/train_12-04_16-01/checkpoints/epoch018-loss0.338.pth
 
-# 但排除掉（也就是保留）这个特定的文件夹
-!NestFuse/runs/train_12-04_16-01/
+# 3. 忽略训练日志文件
+**/events.out.tfevents.*
